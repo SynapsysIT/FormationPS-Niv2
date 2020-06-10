@@ -35,7 +35,7 @@ Function Show-ProcessID {
     [CmdletBinding()]
     Param(
        [Parameter(Mandatory=$true, ValueFromPipeline=$true)]
-       [PSObject]$Process
+       [System.Diagnostics.Process]$Process
     )
   
     Begin {
