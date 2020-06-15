@@ -9,10 +9,7 @@ $Credentials = [PSCredential]::new('Adminstrator', $password)
 
 
 
-$XML = [xml](Get-Content .\Snippets\BandData.xml)
-$XML.Bands.Band.Name 
-$XML.Bands.Band[0].ChildNodes.Item(0)."#text" = "Club Dorothée"
-$XML.Save(".\Snippets\NewBandData.xml")
+
 
 
 

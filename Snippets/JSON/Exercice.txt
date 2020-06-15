@@ -1,0 +1,10 @@
+﻿A Partir du dossier SampleData :
+
+Exporter sous forme d'objet un résumé contenant :
+
+- Le nombre de fichier traités
+- Le nombre d'items total
+- Le nombre total d'erreurs
+- La moyenne des warnings
+- Le premier job éxécuté
+- Le dernier job éxécuté
