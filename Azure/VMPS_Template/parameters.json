@@ -1,0 +1,56 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "location": {
+            "value": "northeurope"
+        },
+        "networkSecurityGroupRules": {
+            "value": [
+                {
+                    "name": "RDP",
+                    "properties": {
+                        "priority": 300,
+                        "protocol": "TCP",
+                        "access": "Allow",
+                        "direction": "Inbound",
+                        "sourceAddressPrefix": "*",
+                        "sourcePortRange": "*",
+                        "destinationAddressPrefix": "*",
+                        "destinationPortRange": "3389"
+                    }
+                }
+            ]
+        },
+        "subnetName": {
+            "value": "VM"
+        },
+        "virtualNetworkId": {
+            "value": "/subscriptions/d27b4cdb-88ca-4aad-b72d-43e46333cc18/resourceGroups/PS-Formation/providers/Microsoft.Network/virtualNetworks/vNet-PS-Formation"
+        },
+        "publicIpAddressType": {
+            "value": "Dynamic"
+        },
+        "publicIpAddressSku": {
+            "value": "Basic"
+        },
+        "virtualMachineRG": {
+            "value": "PS-Formation"
+        },
+        "osDiskType": {
+            "value": "StandardSSD_LRS"
+        },
+        "virtualMachineSize": {
+            "value": "Standard_D2_v2"
+        },
+        "adminUsername": {
+            "value": "adm-ps"
+        },
+        "diagnosticsStorageAccountName": {
+            "value": "stopsformation"
+        },
+        "diagnosticsStorageAccountId": {
+            "value": "/subscriptions/d27b4cdb-88ca-4aad-b72d-43e46333cc18/resourceGroups/PS-Formation/providers/Microsoft.Storage/storageAccounts/stopsformation"
+        }
+    }
+}
