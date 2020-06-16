@@ -1,6 +1,7 @@
 ﻿
 $CIMData = Get-CimInstance -ClassName Win32_LogicalDisk -Filter "DeviceID='C:'"
 
+#PsCustomObject
 $Obj = [PSCustomObject]@{
     ComputerName = $env:COMPUTERNAME
     FreeSpace    = $CIMData.Freespace/1GB
@@ -8,8 +9,6 @@ $Obj = [PSCustomObject]@{
 
 }
 
-
-$Obj
 Write-Output $Obj
 
 #Add properties

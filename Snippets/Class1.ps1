@@ -1,10 +1,19 @@
-﻿class People 
+﻿#Enumerations
+Enum Sexe
+{
+    M
+    F
+    X
+}
+
+
+class People 
 {
     [string]$Nom
     [string]$Prenom
     [datetime]$DateNaissance
     [string]$VilleNaissance
-    [char]$Sexe
+    [Sexe]$Sexe
 
     hidden [string]$ID
 
@@ -12,7 +21,7 @@
     {
     }
 
-    People([string]$Nom, [string]$Prenom, [datetime]$DateNaissance,[string]$VilleNaissance, [char]$Sexe)
+    People([string]$Nom, [string]$Prenom, [datetime]$DateNaissance,[string]$VilleNaissance, [sexe]$Sexe)
     {
         $this.Nom = $Nom
         $this.Prenom = $Prenom
@@ -36,17 +45,10 @@
         
 }
 
-$Var = [people]::new("Mazoyer","Julien",(Get-Date 12/10/1984),"Nîmes","M")
+$Var = [people]::new("Turing","Alan",(Get-Date 23/06/1912),"Londres","M")
 $Var.GetAge()
 
 $Var | Get-Member
 
-#Enumerations
-Enum Turtles
-{
-    Donatello = 1
-    Leonardo = 2
-    Michelangelo = 3
-    Raphael = 4
-}
+
 

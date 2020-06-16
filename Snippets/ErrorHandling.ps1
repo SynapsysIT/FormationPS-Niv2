@@ -1,7 +1,9 @@
 ﻿try
 {
-    Get-ChildItem -Path "C:\NotExist" -ErrorAction Stop            #Cette erreur n'est pas "terminating" par defaut. Vous devez ajouter "-ErrorAction Stop" pour la rendre critique et qu'elle soit catchée
+    #Cette erreur n'est pas "terminating" par defaut. 
+    #Vous devez ajouter "-ErrorAction Stop" pour la rendre critique et qu'elle soit catchée
 
+    Get-ChildItem -Path "C:\NotExist" -ErrorAction Stop           
     Write-Host "Everything is fine !" -ForegroundColor Green
 
     1/0

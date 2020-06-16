@@ -5,6 +5,7 @@
         [int]$Table
     )
     
+    #Permet de remonter des informations sur la commande "appelante", en l'occurence ici la fonction
     $caller = (Get-PSCallStack)[0]
     Write-Verbose -Message "Function: $($caller.Command) - Params used: $($caller.Arguments)"
  

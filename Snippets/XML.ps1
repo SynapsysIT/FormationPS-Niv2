@@ -47,7 +47,7 @@ $XML.Save(".\BandData.modified.xml")
 
 #=====================================================================
 
-# CREER UN XML
+# CREER UN XML A PARTIR DE RIEN
 [xml]$Doc = New-Object System.Xml.XmlDocument
 $Dlecaration = $Doc.CreateXmlDeclaration("1.0", "UTF-8", $null)
 $Doc.AppendChild($Dlecaration) | Out-Null
