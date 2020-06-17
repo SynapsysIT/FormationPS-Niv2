@@ -73,7 +73,7 @@
                 'Cores'             = $CSInfo.numberoflogicalprocessors
                 'RAM'               = ($CSInfo.totalphysicalmemory / 1GB)
                 'Arch'              = $ProcInfo.addresswidth
-                'SysDriveFreeSpace' = {}($DriveInfo.freespace / $DriveInfo.)
+                'SysDriveFreeSpace' = ($DriveInfo.freespace / 1GB)
             }
 
 
