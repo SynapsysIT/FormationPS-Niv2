@@ -9,7 +9,7 @@ $RessourceGroupName = (Get-AzResourceGroup -Name "PS-Formation").ResourceGroupNa
 $TemplateFile = Join-Path $PSScriptRoot -ChildPath template.json
 $ParameterFile = Join-Path $PSScriptRoot -ChildPath parameters.json
 
-foreach ($num in 5..$VMNumber)
+foreach ($num in 5..7)
 {
     $Num = "{0:D2}" -f $num
 
@@ -31,4 +31,6 @@ foreach ($num in 5..$VMNumber)
         -TemplateParameterFile $ParameterFile
 
 }
+
+
 

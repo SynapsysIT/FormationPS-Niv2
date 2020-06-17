@@ -162,31 +162,6 @@
                     }
                 }
             }
-        },
-        {
-            "name": "Microsoft.CustomScriptExtension-20200612133302",
-            "apiVersion": "2015-01-01",
-            "type": "Microsoft.Resources/deployments",
-            "properties": {
-                "mode": "incremental",
-                "templateLink": {
-                    "uri": "https://gallery.azure.com/artifact/20161101/Microsoft.CustomScriptExtension-arm.2.0.56/Artifacts/MainTemplate.json"
-                },
-                "parameters": {
-                    "vmName": {
-                        "value": "[parameters('virtualMachineName')]"
-                    },
-                    "location": {
-                        "value": "northeurope"
-                    },
-                    "fileUris": {
-                        "value": "https://stopsf01.blob.core.windows.net/scripts/VMExtension.ps1?sp=r&st=2020-06-12T20:03:29Z&se=2020-06-21T04:03:29Z&spr=https&sv=2019-10-10&sr=b&sig=Z1lAIAbo%2BhB42AkbW1R6VYJuiEzkN6%2BimpeqkK1iyB4%3D"
-                    }
-                }
-            },
-            "dependsOn": [
-                "[concat('Microsoft.Compute/virtualMachines/', parameters('virtualMachineName'))]"
-            ]
         }
     ],
     "outputs": {

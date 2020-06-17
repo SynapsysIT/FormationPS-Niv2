@@ -9,6 +9,12 @@
 $password = ConvertTo-SecureString 'Password@123' -AsPlainText -Force
 $Credentials = [PSCredential]::new('Adminstrator', $password)
 
+#Chronomètre
+$StopWatch = [system.diagnostics.stopwatch]::StartNew()
+$StopWatch.ElapsedMilliseconds
+$StopWatch.Stop()
+$StopWatch.Elapsed
+
 
 #Créer un objet Version
 [version]"1.0.2"

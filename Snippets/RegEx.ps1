@@ -17,3 +17,6 @@ $Matches.titre
 $Matches.saison
 $Matches.episode
 
+
+#Ajouter les caractères d'échappement pour une chaine RegEx
+[RegEx]::Escape("C:\Windows\System32")

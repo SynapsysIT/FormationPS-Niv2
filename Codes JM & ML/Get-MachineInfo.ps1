@@ -2,9 +2,9 @@
 {
     [CmdletBinding()]
     Param(
-        [Parameter(ValueFromPipeline = $True, Mandatory = $True)]
+        [Parameter(ValueFromPipeline = $True, Mandatory = $false)]
         [Alias('CN', 'DNSHostName', 'Name')]
-        [string[]]$ComputerName,
+        [string[]]$ComputerName = "localhost",
 
         [switch]$UseDCOM
     )
@@ -73,7 +73,7 @@
                 'Cores'             = $CSInfo.numberoflogicalprocessors
                 'RAM'               = ($CSInfo.totalphysicalmemory / 1GB)
                 'Arch'              = $ProcInfo.addresswidth
-                'SysDriveFreeSpace' = ($DriveInfo.freespace / 1GB)
+                'SysDriveFreeSpace' = {}($DriveInfo.freespace / $DriveInfo.)
             }
 
 
