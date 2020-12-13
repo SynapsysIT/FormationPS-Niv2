@@ -1,4 +1,7 @@
-﻿function Get-MachineInfoCollab
+﻿
+
+
+function Get-MachineInfoCollab
 {
     [CmdletBinding()]
     param (

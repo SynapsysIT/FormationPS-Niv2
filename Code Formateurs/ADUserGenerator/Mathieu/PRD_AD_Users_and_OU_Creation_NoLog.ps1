@@ -13,8 +13,11 @@
 
 Param (
     [Parameter(Mandatory = $True, Position = 1)]
-    $ImportCSV
+    [ValidateScript({Test-Path -Path $_})]
+    [string]$CSV
 )
+
+
 
 #region Function
 #region Function Create OU and Users
