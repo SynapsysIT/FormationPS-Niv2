@@ -1,11 +1,12 @@
 ﻿{
-    "terminal.integrated.shell.windows": "C:\\Program Files\\PowerShell\\7\\pwsh.exe",
+    "terminal.integrated.defaultProfile.windows": "PowerShell",
     "files.defaultLanguage": "powershell",
     "powershell.scriptAnalysis.enable": true,
     "powershell.startAutomatically": true,
     "powershell.codeFormatting.openBraceOnSameLine": false,
     "editor.formatOnType": false,
     "editor.formatOnPaste": false,
+    "editor.tabCompletion": "on",
     "editor.folding": true,
     "editor.acceptSuggestionOnEnter": "off",
     "git.ignoreMissingGitWarning": true,
@@ -14,6 +15,5 @@
     "files.encoding": "utf8bom",
     "files.autoGuessEncoding": true,
     "editor.fontFamily": "Consolas, 'Courier New', monospace",
-    "workbench.colorTheme": "One Dark Pro",
     "terminal.integrated.automationShell.linux": ""
 }
